@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern-News-Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,400;0,500;0,700;1,300;1,400&family=Quicksand:wght@400;500;700&family=Raleway:wght@400;500;700&family=Tenali+Ramakrishna&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()">
+                <img class="Company-logo" src="./company.jpg" alt="Company-logo">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+                    <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input type="text" class="news-input" id="search-text" placeholder="e.g. Science">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+
+        </div>
+
+    </main>
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-image">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the title</h3>
+                <h6 id="news-source" class="news-source">End Gadgets 13/07/2023</h6>
+                <p id="news-desc" class="news-dec">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi veniam corrupti commodi delectus voluptatem autem totam debitis possimus repellat rerum?</p>
+            </div>
+        </div>
+    </template>
+    <script src="script.js"></script>
+</body>
+</html>
